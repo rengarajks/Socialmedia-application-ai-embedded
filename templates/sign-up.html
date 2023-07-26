@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/fc1e235b2e.js"></script>
+  <link rel="stylesheet" href="{% static 'assets2/style.css' %}">
+  <title>Instagram | Register</title>
+</head>
+
+<body>
+
+  <div id="wrapper">
+    <div class="container">
+      <div class="form-data">
+        <form action="" method="POST">
+          {% csrf_token %}
+          <div class="logo">
+            <img src="/media/logo.png" height="30px" width="30px" alt="logo">
+            <p style="font-style: bold;font-size: 40px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">M A K E I N</p><br><br><br><br><br><br>
+          </div>
+     
+          {{form.username}}
+          {{form.email}}
+          {{form.password1}}
+          {{form.password2}}
+          <button class="form-btn" type="submit">Sign Up</button>
+
+
+        </form>
+        <div class="sign-up">
+          Already have an account? <a href="{% url 'sign-in' %}">Log In</a>
+        </div>
+ 
+      </div>
+    </div>
+
+
+  </div>
+
+</body>
+
+</html>
